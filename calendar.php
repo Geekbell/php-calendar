@@ -39,7 +39,6 @@ class calendar {
 		//Get the day of week for the first day of month.
 		$firstOfTheMonth = mktime(0, 0, 0, date("m", $date), 1, date("Y", $date));
 		$dayOfWeek = date("w", $firstOfTheMonth);
-		echo $dayOfWeek;
 		//Create blank days until the first day of the month.
 		if ($dayOfWeek > 0) {
 			for ($i = 1; $i <= $dayOfWeek; $i++) {
