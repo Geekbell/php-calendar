@@ -7,18 +7,18 @@ If you are using this code and need help, feel free to contact me.
 
 Example:
 
-<?php
+    <?php
 
-//Include the calendar class in your code
-include 'functions/php-calendar/calendar.php';
+    //Include the calendar class in your code
+    include 'functions/php-calendar/calendar.php';
 
-//Create a new instance of the calendar object
-$calendar = new calendar;
+    //Create a new instance of the calendar object
+    $calendar = new calendar;
 
-//Create a date object with the current date or any date
-$date = mktime();
+    //Create a date object with the current date or any date
+    $date = mktime();
 
-//Call the showCalendar function to display the date. 
-echo $calendar->showCalendar($date);
+    //Call the showCalendar function to display the date. 
+    echo $calendar->showCalendar($date);
 
-?>
+    ?>
