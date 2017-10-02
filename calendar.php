@@ -21,6 +21,7 @@ class calendar {
 			$date = mktime();
 		}
 		$output = '';
+
 		//Create Month and Date Header
 		$output .= "<div class='calendar-Label'>";
 		$output .= date("F", $date);
@@ -36,9 +37,11 @@ class calendar {
 		$output .= "</tr><tr>\n";
 
 		$currentDay = 1;
+
 		//Get the day of week for the first day of month.
 		$firstOfTheMonth = mktime(0, 0, 0, date("m", $date), 1, date("Y", $date));
 		$dayOfWeek = date("w", $firstOfTheMonth);
+
 		//Create blank days until the first day of the month.
 		if ($dayOfWeek > 0) {
 			for ($i = 1; $i <= $dayOfWeek; $i++) {
@@ -46,14 +49,13 @@ class calendar {
 			}
 		}
 
-
+		//Create the rest of the month
 		while ($currentDay <= $this->numberOfDays) {
 
 			if ($dayOfWeek == 7) {
 				$output .= "</tr><tr>\n";
 				$dayOfWeek = 0;
 			}
-
 			$output .= "<td>$currentDay</td>\n";
 			$currentDay++;
 			$dayOfWeek++;
@@ -66,9 +68,5 @@ class calendar {
 	}
 
 }
-
-//$cal = new calendar();
-//$date = mktime(0,0,0,6,1,2017);
-//echo $cal->showCalendar($date);
 
 ?>
