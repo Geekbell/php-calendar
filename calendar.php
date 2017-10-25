@@ -45,7 +45,7 @@ class calendar {
 		//Create blank days until the first day of the month.
 		if ($dayOfWeek > 0) {
 			for ($i = 1; $i <= $dayOfWeek; $i++) {
-				$output .="<td class='calendar-Date'>&nbsp;</td>\n";
+				$output .="<td class='calendar-WhiteSpace'>&nbsp;</td>\n";
 			}
 		}
 
@@ -56,7 +56,7 @@ class calendar {
 				$output .= "</tr><tr>\n";
 				$dayOfWeek = 0;
 			}
-			$output .= "<td>$currentDay</td>\n";
+			$output .= "<td class='calendar-Date'>$currentDay</td>\n";
 			$currentDay++;
 			$dayOfWeek++;
 
