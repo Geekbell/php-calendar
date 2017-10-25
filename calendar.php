@@ -20,7 +20,7 @@ class calendar {
 		if (!isset($date)) {
 			$date = mktime();
 		}
-		$output = '';
+		$output = "<div='php-calendar'>";
 
 		//Create Month and Date Header
 		$output .= "<div class='calendar-Label'>";
@@ -62,6 +62,7 @@ class calendar {
 
 		}
 		$output .= "</tr></table>\n";
+		$output .= "</div>";
 
 		return $output;
 
