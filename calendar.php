@@ -57,7 +57,7 @@ class calendar {
 				$dayOfWeek = 0;
 			}
 			$output .= "<td class='calendar-Date'>\n";
-			$output .= "<div class='calendar-Date-content>$currentDay</div>\n";
+			$output .= "<div class='calendar-Date-content'>$currentDay</div>\n";
 			$output .= "</td>\n";
 			$currentDay++;
 			$dayOfWeek++;
